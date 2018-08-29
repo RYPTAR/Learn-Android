@@ -29,6 +29,18 @@ public class CommunicationActivity extends AppCompatActivity implements MessageF
     @Override
     public void onMessageRead(String message){
         textView = findViewById(R.id.text_display_message);
-        textView.setText(message);
+        String activityMessage = "Activity received: " +message;
+        textView.setText(activityMessage);
+
+
+
+        DisplayFragment displayFragment = new DisplayFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("message", message);
+        displayFragment.setArguments(bundle);
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, displayFragment, null);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

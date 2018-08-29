@@ -67,4 +67,10 @@ public class MessageFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        editText.setText("");
+    }
+
 }
