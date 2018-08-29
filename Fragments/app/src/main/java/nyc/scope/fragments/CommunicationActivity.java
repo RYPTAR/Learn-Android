@@ -3,8 +3,11 @@ package nyc.scope.fragments;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
-public class CommunicationActivity extends AppCompatActivity {
+public class CommunicationActivity extends AppCompatActivity implements MessageFragment.OnMessageReadListener{
+
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +24,11 @@ public class CommunicationActivity extends AppCompatActivity {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, messageFragment, null);
             fragmentTransaction.commit();
         }
+    }
+
+    @Override
+    public void onMessageRead(String message){
+        textView = findViewById(R.id.text_display_message);
+        textView.setText(message);
     }
 }
