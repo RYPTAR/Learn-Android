@@ -59,9 +59,10 @@ public class MessageFragment extends Fragment {
         Activity activity = (Activity) context;
 
         try{
-            messageReadListener = (OnMessageReadListener) activity;
-        } catch(ClassCastException e){
 
+            messageReadListener = (OnMessageReadListener) activity;
+
+        } catch(ClassCastException e){
             throw new ClassCastException(activity.toString()+" must override onMessageRead...");
         }
     }
