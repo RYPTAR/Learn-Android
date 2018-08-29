@@ -10,7 +10,7 @@ import android.widget.Button;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Demos Dynamic Fragments and utilizing fragment swapping. This is the starting fragment
  */
 public class HomeFragment extends Fragment {
 
@@ -28,6 +28,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         button = view.findViewById(R.id.b1);
 
+        // Sets onClick
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

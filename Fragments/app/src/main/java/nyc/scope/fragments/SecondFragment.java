@@ -11,10 +11,12 @@ import android.widget.Button;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Demos Dynamic Fragments and utilizing fragment swapping. This is the second fragment swapped to
+ * Also switches to the communication activity to demo the fragment communication
  */
 public class SecondFragment extends Fragment {
 
+    // Button placeholder
     Button button;
 
     public SecondFragment() {
@@ -28,8 +30,10 @@ public class SecondFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_second, container, false);
 
+        // Sets Fragment button
         button = view.findViewById(R.id.b3);
 
+        // You must set fragment buttons' onClickListener and onClick method
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -40,9 +44,4 @@ public class SecondFragment extends Fragment {
 
         return view;
     }
-
-    /*public void openCommunicationActivity(View view){
-        Intent intent = new Intent(getActivity(), CommunicationActivity.class);
-        startActivity(intent);
-    }*/
 }

@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 /**
  * Created by Ray De Jesus aka RYPTAR 8/18/18
+ *
+ * Demos the use of a static fragment
  */
 public class HeadlineFragment extends Fragment{
 
@@ -17,6 +19,7 @@ public class HeadlineFragment extends Fragment{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        // Creating the view in a variable before inflating for possible manipulation
         View view = inflater.inflate(R.layout.headline_fragment_layout, container, false);
         return view;
     }
