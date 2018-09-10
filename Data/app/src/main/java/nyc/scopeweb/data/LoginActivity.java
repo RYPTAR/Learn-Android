@@ -2,6 +2,7 @@ package nyc.scopeweb.data;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
@@ -26,4 +27,7 @@ public class LoginActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    public void loginUser(View view) {
+    }
 }
