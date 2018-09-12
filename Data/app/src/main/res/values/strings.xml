@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Data</string>
+
+    <string name="user_name">test</string>
+    <string name="user_password">password</string>
+
+    <string name="login_preference">nyc.scopeweb.data.login_preference</string>
+    <string name="login_status_preference">nyc.scopeweb.data.login_status_preference</string>
 </resources>
