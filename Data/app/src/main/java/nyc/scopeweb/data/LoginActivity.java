@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
 
-        UserName = findViewById(R.id.user_name);ty
+        UserName = findViewById(R.id.user_name);
         UserPassword = findViewById(R.id.user_password);
 
         if(preferenceConfig.readLoginStatus() == true){
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         if(username.equals(getResources().getString(R.string.user_name))
                 && password.equals(getResources().getString(R.string.user_password))){
 
-            startActivity(new Intent(this,HomeActivity.class));
+            startActivity(new Intent(this, HomeActivity.class));
             preferenceConfig.writeLoginStatus(true);
             finish();
         }
