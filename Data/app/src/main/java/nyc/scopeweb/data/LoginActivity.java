@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
+    // Used to load the 'native-lib' library on application startup
     static {
         System.loadLibrary("native-lib");
     }
@@ -24,11 +24,12 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
 
-        UserName = findViewById(R.id.user_name);
+        UserName = findViewById(R.id.user_name);ty
         UserPassword = findViewById(R.id.user_password);
 
         if(preferenceConfig.readLoginStatus() == true){
             startActivity(new Intent(this, HomeActivity.class));
+            finish();
         }
 
     }
@@ -48,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
             startActivity(new Intent(this,HomeActivity.class));
             preferenceConfig.writeLoginStatus(true);
+            finish();
         }
         else{
             Toast.makeText(this, "Login Failed... Please try again...", Toast.LENGTH_SHORT).show();
