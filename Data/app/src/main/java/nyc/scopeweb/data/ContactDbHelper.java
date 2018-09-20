@@ -1,5 +1,6 @@
 package nyc.scopeweb.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -33,4 +34,16 @@ public class ContactDbHelper extends SQLiteOpenHelper {
         db.execSQL(DROP_TABLE);
         onCreate(db);
     }
+
+    public void addContact(int id, String name, String email, SQLiteDatabase db){
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ContactContract.ContactEntry.CONTACT_ID, id);
+        contentValues.put(ContactContract.ContactEntry.NAME, name);
+        contentValues.put(ContactContract.ContactEntry.EMAIL, email);
+
+        db.insert(ContactContract.ContactEntry.TABLE_NAME, null, contentValues);
+        Log.d("Database Operation", "Contact inserted!");
+    }
+
 }
