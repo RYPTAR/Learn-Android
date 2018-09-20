@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         UserPassword = findViewById(R.id.user_password);
 
         if(preferenceConfig.readLoginStatus() == true){
-            startActivity(new Intent(this, HomeActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
 
@@ -47,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         if(username.equals(getResources().getString(R.string.user_name))
                 && password.equals(getResources().getString(R.string.user_password))){
 
-            startActivity(new Intent(this, HomeActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             preferenceConfig.writeLoginStatus(true);
             finish();
         }
