@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnDbOpListener {
 
     private SharedPreferenceConfig preferenceConfig;
 
@@ -30,5 +30,17 @@ public class MainActivity extends AppCompatActivity {
         preferenceConfig.writeLoginStatus(false);
         startActivity(new Intent(this,LoginActivity.class));
         finish();
+    }
+
+    @Override
+    public void dbOpPerformed(int method) {
+
+        switch (method){
+
+            case 0:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddContactFragment())
+                        .addToBackStack(null).commit();
+                break;
+        }
     }
 }
