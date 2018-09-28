@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -52,6 +53,8 @@ public class AddContactFragment extends Fragment {
                 Id.setText("");
                 Name.setText("");
                 Email.setText("");
+
+                Toast.makeText(getActivity(),"Contact Saved Successfully...", Toast.LENGTH_SHORT).show();
             }
         });
 
