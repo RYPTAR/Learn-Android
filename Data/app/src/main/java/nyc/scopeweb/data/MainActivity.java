@@ -15,6 +15,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
+
+        if(findViewById(R.id.fragment_container) != null){
+            if(savedInstanceState != null){
+                return;
+            }
+
+            HomeFragment homeFragment = new HomeFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, homeFragment).commit();
+        }
     }
 
     public void userLogOut(View view){
