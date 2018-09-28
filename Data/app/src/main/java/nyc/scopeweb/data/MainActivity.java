@@ -38,7 +38,14 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnDb
         switch (method){
 
             case 0:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddContactFragment())
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new AddContactFragment())
+                        .addToBackStack(null).commit();
+                break;
+
+            case 1:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new ViewContactsFragment())
                         .addToBackStack(null).commit();
                 break;
         }
