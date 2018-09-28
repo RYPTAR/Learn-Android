@@ -40,8 +40,8 @@ public class AddContactFragment extends Fragment {
             public void onClick(View view) {
 
                 String id = Id.getText().toString();
-                String name = Id.getText().toString();
-                String email = Id.getText().toString();
+                String name = Name.getText().toString();
+                String email = Email.getText().toString();
 
                 ContactDbHelper contactDbHelper = new ContactDbHelper(getActivity());
                 //** WARNING! ** Never actually do a database operation on the main thread
