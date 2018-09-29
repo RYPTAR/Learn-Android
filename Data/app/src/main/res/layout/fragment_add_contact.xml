@@ -23,7 +23,7 @@
 
     <EditText
         android:id="@+id/text_contact_id"
-        android:layout_width="wrap_content"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -33,11 +33,11 @@
         android:inputType="textPersonName|number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_header" />
+        app:layout_constraintTop_toBottomOf="@+id/header_add" />
 
     <EditText
         android:id="@+id/text_contact_name"
-        android:layout_width="wrap_content"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -51,7 +51,7 @@
 
     <EditText
         android:id="@+id/text_contact_email"
-        android:layout_width="wrap_content"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
